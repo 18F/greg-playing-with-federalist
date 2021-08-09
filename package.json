@@ -1,0 +1,11 @@
+{
+  "name": "federalist-playground",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "federalist": "mkdir -p _site && echo hello > _site/index.html"
+  },
+  "author": "",
+  "license": "ISC"
+}
