@@ -1,54 +1,31 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby minimal starter
-</h1>
+# Playing With Federalist
 
-## 🚀 Quick start
+I was inspired by @hbillings to try deploying some non-Jekyll-, non-Hugo-
+generated content to [Federalist](https://federalist.18f.gov) after she told me
+that it can be configured to use Node.js as the builder. After poking around in
+the documentation, I was delighted to find out how easy it is: Federalist will
+publish anything in the `_site` directory as static content. You can use
+anything to build your site! Federalist doesn't care! It just provides Jekyll
+and Hugo as a convenience!
 
-1.  **Create a Gatsby site.**
+## First test
 
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
+As a first test, [this repo](119481f) contained a simple npm script and no
+dependencies. The script created the `_site` directory and wrote some text into
+an `index.html` file there. Bam, Federalist published it. So nice!
 
-    ```shell
-    # create a new Gatsby site using the minimal starter
-    npm init gatsby
-    ```
+One important lesson I learned: you ***must*** have a `package-lock.json` file
+because Federalist uses the `npm ci` command instead of `npm install`. So... be
+aware of that.
 
-2.  **Start developing.**
+## Gatsby
 
-    Navigate into your new site’s directory and start it up.
+As a second test (not that it was really needed), I added
+[Gatsby](gatsbyjs.com), and then updated the [npm script](e2d7afa) to perform a
+Gatsby build and then move the output to the `_site` directory. I was not
+surprised, but still pleased, that Federalist was happy to pick up my files and
+publish them. Cheers, Gatsby on Federalist!
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
-
-3.  **Open the code and start customizing!**
-
-    Your site is now running at http://localhost:8000!
-
-    Edit `src/pages/index.js` to see your site update in real-time!
-
-4.  **Learn more**
-
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-## 🚀 Quick start (Gatsby Cloud)
-
-Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
-
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-minimal)
+Now that I've shown myself how to do this, I'll archive this repo because it's
+just taking up space otherwise. But now we both know what it was for, and that
+makes this README worthwhile.
