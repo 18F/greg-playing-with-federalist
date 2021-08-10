@@ -1,11 +1,31 @@
 {
-  "name": "federalist-playground",
+  "name": "bloop-blorp",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "private": true,
+  "description": "bloop-blorp",
+  "author": "Greg Walker",
+  "keywords": [
+    "gatsby"
+  ],
   "scripts": {
-    "federalist": "mkdir -p _site && echo hello > _site/index.html"
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "federalist": "rm -rf _site && npm run build && mv public _site"
   },
-  "author": "",
-  "license": "ISC"
+  "dependencies": {
+    "@mdx-js/mdx": "^1.6.22",
+    "@mdx-js/react": "^1.6.22",
+    "gatsby": "^3.11.0",
+    "gatsby-plugin-mdx": "^2.11.0",
+    "gatsby-plugin-sass": "^4.11.0",
+    "gatsby-plugin-sitemap": "^4.7.0",
+    "gatsby-source-filesystem": "^3.11.0",
+    "gatsby-transformer-remark": "^4.8.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "sass": "^1.37.5"
+  }
 }
